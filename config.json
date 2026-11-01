@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "study": "split_or_enrich_stage_a_synthetic_pilot",
+  "status_note": "Provisional until coordinator freeze. Seeds, sizes and thresholds are pinned here; any change after freeze is rejected by the runner.",
+
+  "dimensions": {"d": 64, "factor_rows": 8, "factor_cols": 8},
+  "tasks": {"n_tasks": 4, "task_weights": [0.25, 0.25, 0.25, 0.25]},
+  "candidates": {
+    "total_terms": 8,
+    "ordering": "lexicographic restricted-growth strings over tasks 0..3; E1, seven E2 partitions, E4",
+    "ranks_by_expert_count": {"1": 8, "2": 4, "4": 2},
+    "factor_scalars_per_candidate": 1024
+  },
+
+  "teacher": {
+    "component_frobenius_norm": 8.0,
+    "kronecker_rank_q_values": [2, 6],
+    "diversity_delta_values": [0.2, 1.0],
+    "cells_order": [[2, 0.2], [2, 1.0], [6, 0.2], [6, 1.0]],
+    "replicate_blocks_per_cell": 3,
+    "dense_residual_norm_ratio": 0.1,
+    "dense_residual_scope": "independent per task; ||R_t||_F = ratio * ||C + delta S_t||_F",
+    "factor_entry_distribution": "standard normal, numpy PCG64 via SeedSequence"
+  },
+  "covariance": {
+    "kinds_order": ["iso", "aniso"],
+    "aniso_condition_number": 4.0,
+    "trace": 64.0,
+    "aniso_spectrum": "geometric lambda_i proportional to kappa^(-i/(d-1)), i=0..d-1, rescaled to trace",
+    "aniso_rotation": "independent Haar orthogonal per task (QR with sign fix), shared by nothing else"
+  },
+  "noise": {"output_noise_energy_fraction": 0.05},
+  "data_sizes": {"pilot": 64, "train": 512, "val": 128, "test": 2048},
+
+  "seeds": {
+    "scientific_root": 2026103101,
+    "technical_root": 9900731,
+    "unit_test_root": 7700123,
+    "warmup_root": 5500001
+  },
+
+  "selectors": {
+    "primary": "naive_full64",
+    "crossfit_halves": [32, 32],
+    "covariance_ridge_fraction": 0.1,
+    "tie_break": "lowest canonical candidate index among exactly equal scores (numpy argmin)"
+  },
+
+  "training": {
+    "optimizer": "torch.optim.Adam",
+    "lr": 0.01,
+    "betas": [0.9, 0.999],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "steps": 400,
+    "full_batch": true,
+    "n_init_seeds": 2,
+    "init": "A_j entries iid N(0, 1/(8 r)), B_j = 0, no output multiplier; common random numbers across candidates from a (4,8,8,8) master normal tensor sliced [:E,:r]",
+    "dtype": "float64",
+    "device": "cpu",
+    "convergence_window_steps": 50,
+    "convergence_flag_threshold_normalized": 0.001,
+    "convergence_flag_role": "diagnostic only; never changes the verdict"
+  },
+
+  "early_selector": {
+    "pilot_train": 32,
+    "pilot_val": 32,
+    "lr": 0.01,
+    "device": "cpu",
+    "dtype": "float64",
+    "primary_common_ceiling_s": 1.0,
+    "secondary_time_matched_to": "median naive-selector wall time",
+    "analytic_timing_repeats": 5,
+    "analytic_timing_statistic": "median",
+    "timing_scope": "PilotView (raw pilot arrays) created outside timing; each method timed from raw arrays to chosen index (gradients/moments, setup, search, validation, choice)"
+  },
+
+  "runtime": {
+    "torch_threads": 1,
+    "blas_threads_env": {"VECLIB_MAXIMUM_THREADS": "1", "OMP_NUM_THREADS": "1"}
+  },
+
+  "gates": {
+    "runtime_cap_seconds": 3600,
+    "gate2_regret_threshold": 0.02,
+    "gate2_min_env_count": 20,
+    "gate3_margin": 0.01,
+    "robustness_aggregations": ["mean", "seed0", "seed1", "min"],
+    "robustness_population_risk": true,
+    "regret_negative_tolerance": 1e-12,
+    "moment_vs_sample_loss_rel_tol": 1e-09,
+    "naive_two_impl_rel_tol": 1e-10
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "mode": "scientific",
+  "root": 2026103101,
+  "env_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "versions": {
+    "python": "3.11.13",
+    "numpy": "2.4.6",
+    "torch": "2.6.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "runtime": {
+    "torch_threads": 1,
+    "blas_env": {
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "freeze_manifest": {
+    "manifest_version": 1,
+    "approved": true,
+    "approver": "Codex coordinator: user-authorized pilot, final source audit and independent 59-test pass, 2026-10-31",
+    "note": "Final protocol includes common 1-second early ceiling; technical development evidence disclosed; scientific root unseen before freeze; prose convergence caveats clarified by coordinator.",
+    "created_utc": "2026-10-31T15:55:00.534636+00:00",
+    "files": {
+      "soe/__init__.py": "f0d9714c032087c3b66df7278f354c2e74a21de594872d3281ba4c262bb10590",
+      "soe/candidates.py": "3b951e0c4177e9aa393bcb550cc602b55f2347737492f0b193eb2d00506165a1",
+      "soe/early.py": "58eec7ed641ee3c44dc295969a94c3e7f0036d3aedf4f6cb317f2d458abf7eec",
+      "soe/envgen.py": "432a8458af856cbb572219f0090bd448378acfe41c93ddf274410765bc97d035",
+      "soe/evaluate.py": "c2803aaff1204354a7c5cd1e15aa959c38248b8ab6edd4da7dcfd273f754fe98",
+      "soe/kron.py": "92de97ecf1b69a74c95ae2b099200c1a574d6611436e4b6b29f7a0f1bf901c5e",
+      "soe/pipeline.py": "4a3ba54ca160e8df468ec291c3c728094baa4dd292e9cdc4b9720a4f6908a5c3",
+      "soe/provenance.py": "a19963c252417c2343a6b0c8d52b14a4384e71709626a20cb67295a88e809d47",
+      "soe/selectors.py": "6c34e798134b6589a007f7b05b38f43883df9a124650940642c995f23c69570e",
+      "soe/train.py": "a0f773adf2f00beb5f973bf498be6fe6c1a936eb174d170172bae7e26cd5bf63",
+      "scripts/_path.py": "653c6ce5844cbaf27aea5b539decde526dc5f51048c457ee24764ca4e5799276",
+      "scripts/benchmark_runtime.py": "a5f5370f324fc6c2808159fb42783cef5f4a3840188a30cfa4172c96f56d1301",
+      "scripts/freeze.py": "f75e030a06972615bdd29dc33abb8ecdf4016b1ec32ab24654ea738f90ccc264",
+      "scripts/run_pilot.py": "61f85e3954e83c62b49a93ece6bd5f4c13dd9a29a2acddc863c88ed41eccb028",
+      "scripts/technical_smoke.py": "7baf616886f49b9a2402731e1d2909bc9410d8e39bb77e53d90ae9e83b2eade4",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/_common.py": "92e6b2d2cb29f6486c10168b34b9c84b8c3366e16defcbcd5397d5a481431712",
+      "tests/test_candidates.py": "3ff86481970af564cc125f00c610be2678c41a3527a92db95f2d97069df00ffa",
+      "tests/test_early.py": "5ea4c3dfec40f70c147b8809921557e450d224fb94965667fcc9e27b32dc32b7",
+      "tests/test_envgen.py": "4e70b290ad22e8463f868894ebd72f49f83c465873e12583f4f133e94da50db9",
+      "tests/test_evaluate.py": "5f9efd8b19cce261477a1ae0cc7d3ff158aa82084ed8fe911fcc70502b9aaff7",
+      "tests/test_kron.py": "fe2e147e98b1ad5c0cdb48d4f24f24a142d3bb933bced20aa6077be98aae94c6",
+      "tests/test_mps.py": "ba66233d6e46e88a1d0ccbb83806dc36e7576adacbc0e7ef0a986b1b2c41f9a7",
+      "tests/test_pipeline_isolation.py": "5ba857016b932b272a180f9fcf287cdf4d0e651a76dd5a1ffcf4d9446d6f5c9c",
+      "tests/test_provenance.py": "c3250f42174ad253d01982f1977c14374f8fd3c40befddb3b7966144a3c001f1",
+      "tests/test_selectors.py": "130e58d31a1e2426496759d72edc956c8ce1a5f9c5b7b72c52f75f9ca2ea7494",
+      "tests/test_training.py": "e07348ea82259293014c166e647e383a4380763f8be4b3a0ea3456c343e607a7",
+      "config.json": "0dc15170a8b4b325a2435b7a97a18085aed0f1a688fa5b0db7412ccb50e93105",
+      "PROTOCOL.md": "18d78880761754d879198278735497cee9a78353ca32e36913935b300a9dc677"
+    },
+    "versions": {
+      "python": "3.11.13",
+      "numpy": "2.4.6",
+      "torch": "2.6.0",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "machine": "arm64"
+    },
+    "manifest_path": "/Users/emre/Documents/Antropic_Mech_Int/split_or_enrich/FREEZE_MANIFEST.json",
+    "manifest_sha256": "1741b742f248d6f37044e8fd4dc98ac2ae27be725e9e2bb5abf3b08e2b6957fa"
+  },
+  "config": {
+    "schema_version": 1,
+    "study": "split_or_enrich_stage_a_synthetic_pilot",
+    "status_note": "Provisional until coordinator freeze. Seeds, sizes and thresholds are pinned here; any change after freeze is rejected by the runner.",
+    "dimensions": {
+      "d": 64,
+      "factor_rows": 8,
+      "factor_cols": 8
+    },
+    "tasks": {
+      "n_tasks": 4,
+      "task_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "candidates": {
+      "total_terms": 8,
+      "ordering": "lexicographic restricted-growth strings over tasks 0..3; E1, seven E2 partitions, E4",
+      "ranks_by_expert_count": {
+        "1": 8,
+        "2": 4,
+        "4": 2
+      },
+      "factor_scalars_per_candidate": 1024
+    },
+    "teacher": {
+      "component_frobenius_norm": 8.0,
+      "kronecker_rank_q_values": [
+        2,
+        6
+      ],
+      "diversity_delta_values": [
+        0.2,
+        1.0
+      ],
+      "cells_order": [
+        [
+          2,
+          0.2
+        ],
+        [
+          2,
+          1.0
+        ],
+        [
+          6,
+          0.2
+        ],
+        [
+          6,
+          1.0
+        ]
+      ],
+      "replicate_blocks_per_cell": 3,
+      "dense_residual_norm_ratio": 0.1,
+      "dense_residual_scope": "independent per task; ||R_t||_F = ratio * ||C + delta S_t||_F",
+      "factor_entry_distribution": "standard normal, numpy PCG64 via SeedSequence"
+    },
+    "covariance": {
+      "kinds_order": [
+        "iso",
+        "aniso"
+      ],
+      "aniso_condition_number": 4.0,
+      "trace": 64.0,
+      "aniso_spectrum": "geometric lambda_i proportional to kappa^(-i/(d-1)), i=0..d-1, rescaled to trace",
+      "aniso_rotation": "independent Haar orthogonal per task (QR with sign fix), shared by nothing else"
+    },
+    "noise": {
+      "output_noise_energy_fraction": 0.05
+    },
+    "data_sizes": {
+      "pilot": 64,
+      "train": 512,
+      "val": 128,
+      "test": 2048
+    },
+    "seeds": {
+      "scientific_root": 2026103101,
+      "technical_root": 9900731,
+      "unit_test_root": 7700123,
+      "warmup_root": 5500001
+    },
+    "selectors": {
+      "primary": "naive_full64",
+      "crossfit_halves": [
+        32,
+        32
+      ],
+      "covariance_ridge_fraction": 0.1,
+      "tie_break": "lowest canonical candidate index among exactly equal scores (numpy argmin)"
+    },
+    "training": {
+      "optimizer": "torch.optim.Adam",
+      "lr": 0.01,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "steps": 400,
+      "full_batch": true,
+      "n_init_seeds": 2,
+      "init": "A_j entries iid N(0, 1/(8 r)), B_j = 0, no output multiplier; common random numbers across candidates from a (4,8,8,8) master normal tensor sliced [:E,:r]",
+      "dtype": "float64",
+      "device": "cpu",
+      "convergence_window_steps": 50,
+      "convergence_flag_threshold_normalized": 0.001,
+      "convergence_flag_role": "diagnostic only; never changes the verdict"
+    },
+    "early_selector": {
+      "pilot_train": 32,
+      "pilot_val": 32,
+      "lr": 0.01,
+      "device": "cpu",
+      "dtype": "float64",
+      "primary_common_ceiling_s": 1.0,
+      "secondary_time_matched_to": "median naive-selector wall time",
+      "analytic_timing_repeats": 5,
+      "analytic_timing_statistic": "median",
+      "timing_scope": "PilotView (raw pilot arrays) created outside timing; each method timed from raw arrays to chosen index (gradients/moments, setup, search, validation, choice)"
+    },
+    "runtime": {
+      "torch_threads": 1,
+      "blas_threads_env": {
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1"
+      }
+    },
+    "gates": {
+      "runtime_cap_seconds": 3600,
+      "gate2_regret_threshold": 0.02,
+      "gate2_min_env_count": 20,
+      "gate3_margin": 0.01,
+      "robustness_aggregations": [
+        "mean",
+        "seed0",
+        "seed1",
+        "min"
+      ],
+      "robustness_population_risk": true,
+      "regret_negative_tolerance": 1e-12,
+      "moment_vs_sample_loss_rel_tol": 1e-09,
+      "naive_two_impl_rel_tol": 1e-10
+    }
+  },
+  "started_unix": 1793462109.557322
+}

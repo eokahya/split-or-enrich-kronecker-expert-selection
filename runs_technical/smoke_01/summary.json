@@ -1,0 +1,26 @@
+{
+  "mode": "technical",
+  "complete": true,
+  "valid": true,
+  "total_runtime_s": 10.406129333889112,
+  "runtime_cap_s": 3600,
+  "unit_tests": {
+    "ran": 56,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "ok": true,
+    "output_tail": "........................................................\n----------------------------------------------------------------------\nRan 56 tests in 3.512s\n\nOK\n"
+  },
+  "numerical_gates": {
+    "finite": true,
+    "max_moment_vs_sample_norm": 1.3096107562799819e-15,
+    "max_traj_vs_numpy_norm": 7.303598448484515e-16,
+    "max_naive_two_impl": 4.280664288837588e-16,
+    "moment_vs_sample_ok": true,
+    "two_impl_ok": true,
+    "traj_consistency_ok": true
+  },
+  "selections_sha256": "8e6f98519c900fdd5613d915f48d1f325d3c2b2d8bc17706bbbedf54a35fe3a3",
+  "n_envs_completed": 2
+}

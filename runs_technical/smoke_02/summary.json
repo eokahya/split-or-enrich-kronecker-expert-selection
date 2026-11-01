@@ -1,0 +1,38 @@
+{
+  "mode": "technical",
+  "complete": true,
+  "valid": true,
+  "total_runtime_s": 13.499983916990459,
+  "runtime_cap_s": 3600,
+  "unit_tests": {
+    "ran": 59,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "ok": true,
+    "output_tail": "...........................................................\n----------------------------------------------------------------------\nRan 59 tests in 4.480s\n\nOK\n"
+  },
+  "numerical_gates": {
+    "finite": true,
+    "max_moment_vs_sample_norm": 1.3096107562799819e-15,
+    "max_traj_vs_numpy_norm": 7.303598448484515e-16,
+    "max_naive_two_impl": 4.280664288837588e-16,
+    "early_replay_ok": true,
+    "moment_vs_sample_ok": true,
+    "two_impl_ok": true,
+    "traj_consistency_ok": true
+  },
+  "selections_sha256": "e4487c0ee863fd85efc8956527f4ac23961bf1dd2f747e0dda406ff3560c3b37",
+  "post_run_freeze_check": null,
+  "n_envs_completed": 2,
+  "expected_envs": 2,
+  "optimization_diagnostics": {
+    "role": "diagnostic only; the verdict changes only through the pre-registered INCONCLUSIVE views",
+    "n_runs": 36,
+    "n_last_window_decrease_over_threshold": 0,
+    "max_last_window_decrease_over_Z": 0.0004483127921909396,
+    "iso_population_gap_over_Z_max": 0.0019502838753356316,
+    "iso_population_gap_over_Z_median": 0.00110275007794364,
+    "iso_population_gap_note": "finite-training-sample + optimization gap to the exact class optimum; not by itself an optimization failure"
+  }
+}

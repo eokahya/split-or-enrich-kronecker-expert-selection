@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "frozen_source_hashes_verified": 29,
+  "output_manifest_verified": true,
+  "selection_hash_verified": true,
+  "rows": 432,
+  "max_rebuilt_K_abs_error": 2.498001805406602e-16,
+  "max_recomputed_test_loss_over_Z_error": 7.004728113981266e-16,
+  "max_normalizer_relative_error": 4.2024273294608226e-16,
+  "independent_gate_recalculation": {
+    "mean": {
+      "within_02": 24,
+      "naive_aniso": 0.0003992249303419795,
+      "best_baseline": 0.0003804193239965656,
+      "label": "NO_ADDED_UTILITY"
+    },
+    "seed0": {
+      "within_02": 24,
+      "naive_aniso": 0.00037220460030877497,
+      "best_baseline": 0.0003556315967019809,
+      "label": "NO_ADDED_UTILITY"
+    },
+    "seed1": {
+      "within_02": 24,
+      "naive_aniso": 0.0004305944579927462,
+      "best_baseline": 0.00040955624890871254,
+      "label": "NO_ADDED_UTILITY"
+    },
+    "min": {
+      "within_02": 24,
+      "naive_aniso": 0.0003958080058962532,
+      "best_baseline": 0.00037476979681221956,
+      "label": "NO_ADDED_UTILITY"
+    },
+    "population_risk_mean": {
+      "within_02": 24,
+      "naive_aniso": 0.00039697529745712955,
+      "best_baseline": 0.00036249092865378645,
+      "label": "NO_ADDED_UTILITY"
+    }
+  }
+}
